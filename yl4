@@ -1,0 +1,2 @@
+SELECT YEAR(order_date) AS Aasta, COUNT(*) AS 'tellimuste arv' FROM d124553_bookstore.orders
+GROUP BY YEAR(order_date);
