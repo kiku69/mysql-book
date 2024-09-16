@@ -1,0 +1,1 @@
+SELECT YEAR(o.order_date) AS Aasta, COUNT(o.id) AS "Tellimuste arv", ROUND(SUM(b.price), 2) AS "Müükide summa" FROM d124553_bookstore.orders o LEFT JOIN d124553_bookstore.books b ON o.book_id = b.id WHERE YEAR(o.order_date) = 2017  GROUP BY YEAR(o.order_date)
