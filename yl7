@@ -1,0 +1,1 @@
+SELECT year(o.order_date), SUM(b.price), c.username FROM d124553_bookstore.orders o LEFT JOIN d124553_bookstore.books b ON o.id = b.id LEFT JOIN d124553_bookstore.clients c ON o.id = c.id WHERE year(o.order_date) = 2017  group by c.id order by b.price DESC;
